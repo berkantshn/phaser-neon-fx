@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>phaser-neon-fx demo</title>
+    <link rel="icon" href="data:," />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #05070f;
+        color: #bdf0ff;
+        font: 13px/1.4 ui-monospace, Consolas, Menlo, monospace;
+      }
+      #stage {
+        position: fixed;
+        inset: 0;
+      }
+      #panel {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 12px;
+        max-width: calc(100vw - 48px);
+        padding: 8px 12px;
+        background: rgba(8, 14, 30, 0.8);
+        border: 1px solid rgba(46, 230, 255, 0.35);
+        border-radius: 6px;
+      }
+      #panel strong {
+        color: #2ee6ff;
+        text-shadow: 0 0 8px #2ee6ff;
+      }
+      select,
+      button {
+        font: inherit;
+        color: #bdf0ff;
+        background: #0b1428;
+        border: 1px solid rgba(46, 230, 255, 0.5);
+        border-radius: 4px;
+        padding: 3px 8px;
+        cursor: pointer;
+      }
+      #credit {
+        position: fixed;
+        right: 12px;
+        bottom: 10px;
+        color: #ff4fd8;
+        text-shadow: 0 0 8px #ff4fd8;
+        pointer-events: none;
+      }
+      #hint {
+        position: fixed;
+        left: 12px;
+        bottom: 10px;
+        opacity: 0.7;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage"></div>
+    <div id="panel">
+      <strong>phaser-neon-fx</strong>
+      <label>kill effect <select id="kill-kind"><option value="auto">auto</option></select></label>
+      <label>trail <select id="trail-look"></select></label>
+      <button id="flash" type="button">flash</button>
+      <button id="shake" type="button">shake</button>
+    </div>
+    <div id="hint">Click anywhere</div>
+    <div id="credit">Made By FALCREB</div>
+    <script type="module" src="/demo/main.js"></script>
+  </body>
+</html>
