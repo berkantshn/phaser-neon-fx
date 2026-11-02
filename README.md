@@ -10,12 +10,10 @@ Small neon visual effects library for [Phaser 4](https://phaser.io): particle bu
 
 ## Install
 
-The package is not on npm yet, so install it from a local copy. Phaser is a peer dependency: your project provides it.
+Install the packaged release directly. Phaser is a peer dependency: your project provides it.
 
 ```sh
-git clone https://github.com/berkantshn/phaser-neon-fx.git phaser-neon-fx
-cd my-game
-pnpm add phaser file:../phaser-neon-fx
+pnpm add phaser https://github.com/berkantshn/phaser-neon-fx/releases/download/v0.1.0/phaser-neon-fx-0.1.0.tgz
 ```
 
 ## Usage
@@ -119,12 +117,10 @@ Open the address Vite prints and click anywhere. `pnpm build` writes the demo to
 
 ### Kurulum
 
-Paket henüz npm'de yok, bu yüzden yerel bir kopyadan kurulur. Phaser, peer dependency'dir (kullanan projenin kendisinin kurduğu bağımlılık).
+GitHub Releases'teki hazır paket doğrudan kurulur. Phaser, peer dependency'dir (kullanan projenin kendisinin kurduğu bağımlılık).
 
 ```sh
-git clone https://github.com/berkantshn/phaser-neon-fx.git phaser-neon-fx
-cd oyunum
-pnpm add phaser file:../phaser-neon-fx
+pnpm add phaser https://github.com/berkantshn/phaser-neon-fx/releases/download/v0.1.0/phaser-neon-fx-0.1.0.tgz
 ```
 
 ### Kullanım
