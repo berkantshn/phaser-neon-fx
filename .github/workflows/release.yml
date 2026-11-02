@@ -1,0 +1,22 @@
+# Made By FALCREB
+# v ile başlayan her tag'de indirilebilir paketi GitHub Releases'e yükler.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: corepack enable
+      - run: pnpm pack
+      - run: sha256sum phaser-neon-fx-*.tgz > SHA256SUMS.txt
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" phaser-neon-fx-*.tgz SHA256SUMS.txt --generate-notes --verify-tag
